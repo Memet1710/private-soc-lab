@@ -38,3 +38,24 @@ The lab is used to simulate several basic attack scenarios in a controlled envir
 - SSH access attempts
 - SSH brute-force-like bursts
 - Suspicious outbound connection activity on port 4444
+
+## Detection Rules
+Custom detection rules were created in Suricata to identify suspicious or malicious traffic generated during the lab simulations. These rules were designed to detect several common attack patterns and network events.
+
+The implemented custom rules include:
+- ICMP ping detection
+- ICMP flood-like activity
+- TCP SYN scan activity
+- TCP SYN flood-like activity
+- SSH access to server
+
+## Suricata Integration with Wazuh
+Suricata is integrated with Wazuh by forwarding EVE JSON logs to the Wazuh manager. This allows Suricata network alerts to be collected, parsed, and monitored through the SIEM platform.
+
+Suricata log source:
+- `/var/log/suricata/eve.json`
+
+Suricata custom rules:
+- `/var/lib/suricata/rules/local.rules`
+- SSH brute-force-like bursts
+- Suspicious outbound connection to TCP port 4444
