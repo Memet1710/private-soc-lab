@@ -4,7 +4,7 @@
 This project is a private SOC lab built to simulate attacks and monitor security events using Kali Linux, Wazuh SIEM, Suricata IDS, and an Ubuntu victim server. The lab is designed as a hands-on cybersecurity learning environment for attack simulation, detection validation, and SOC portfolio development.
 
 ## Lab Topology
-![Private SOC Lab Topology](Screenshots/lab-topology.png)
+![Private SOC Lab Topology](screenshots/lab-topology.png)
 
 ## Objectives
 - Simulate basic cyber attacks in a controlled lab
@@ -86,68 +86,68 @@ The following screenshots document the setup, configuration, and detection resul
 ## Key Screenshots
 
 ### Lab Topology
-![Private SOC Lab Topology](Screenshots/lab-topology.png)
+![Private SOC Lab Topology](screenshots/lab-topology.png)
 
 ### IP Configuration
 
 #### Kali Linux
-![Kali IP Configuration](Screenshots/ip-kali.png)
+![Kali IP Configuration](screenshots/ip-kali.png)
 
 #### Wazuh SIEM
-![Wazuh SIEM IP Configuration](Screenshots/ip-siem.png)
+![Wazuh SIEM IP Configuration](screenshots/ip-siem.png)
 
 #### Victim Server
-![Victim IP Configuration](Screenshots/ip-victim.png)
+![Victim IP Configuration](screenshots/ip-victim.png)
 
 ### Service Status
 
 #### Wazuh Manager
-![Wazuh Manager Status](Screenshots/wazuh-manager-status.png)
+![Wazuh Manager Status](screenshots/wazuh-manager-status.png)
 
 #### Wazuh Agent on Victim
-![Wazuh Agent Status](Screenshots/wazuh-agent-status.png)
+![Wazuh Agent Status](screenshots/wazuh-agent-status.png)
 
 #### Suricata on Victim
-![Suricata Status](Screenshots/suricata-status.png)
+![Suricata Status](screenshots/suricata-status.png)
 
 #### SSH on Victim
-![SSH Service Status](Screenshots/ssh-status.png)
+![SSH Service Status](screenshots/ssh-status.png)
 
 ### Configuration and Rules
 
 #### Suricata Custom Rules
-![Suricata Local Rules](Screenshots/victim-suricata-local-rules.png)
+![Suricata Local Rules](screenshots/victim-suricata-local-rules.png)
 
 #### Suricata and Wazuh Integration
-![Suricata Wazuh Integration](Screenshots/suricata-wazuh-integration.png)
+![Suricata Wazuh Integration](screenshots/suricata-wazuh-integration.png)
 
 #### Suricata Configuration Test
-![Suricata Test](Screenshots/victim-suricata-test.png)
+![Suricata Test](screenshots/victim-suricata-test.png)
 
 ### Attack Simulation
 
 #### Ping Test
-![Ping Test](Screenshots/attack-ping.png)
+![Ping Test](screenshots/attack-ping.png)
 
 #### Nmap Scan
-![Nmap Scan](Screenshots/attack-nmap.png)
+![Nmap Scan](screenshots/attack-nmap.png)
 
 #### SSH Access Test
-![SSH Access Test](Screenshots/attack-ssh.png)
+![SSH Access Test](screenshots/attack-ssh.png)
 
 ### Detection Results
 
 #### Suricata Fast Log Alert
-![Suricata Fast Log Alert](Screenshots/victim-suricata-fastlog-alert.png)
+![Suricata Fast Log Alert](screenshots/victim-suricata-fastlog-alert.png)
 
 #### Suricata EVE JSON Alert
-![Suricata EVE Alert](Screenshots/victim-suricata-eve-alert.png)
+![Suricata EVE Alert](screenshots/victim-suricata-eve-alert.png)
 
 #### Wazuh Dashboard Events
-![Wazuh Dashboard Events](Screenshots/wazuh-dashboard-events.png)
+![Wazuh Dashboard Events](screenshots/wazuh-dashboard-events.png)
 
 #### Wazuh Alert Detail
-![Wazuh Alert Detail](Screenshots/wazuh-dashboard-alert-detail.png)
+![Wazuh Alert Detail](screenshots/wazuh-dashboard-alert-detail.png)
 
 ## Current Project Status
 This lab environment has been successfully set up and documented. Core attack simulations and detections have been validated, and the project now serves as a practical SOC portfolio lab demonstrating network monitoring, alert generation, and centralized log analysis.
