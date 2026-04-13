@@ -4,7 +4,7 @@
 This project is a private SOC lab built to simulate attacks and monitor security events using Kali Linux, Wazuh SIEM, Suricata IDS, and an Ubuntu victim server.
 
 ## Lab Topology
-![Private SOC Lab Topology](screenshots/lab-topology.jpeg)
+![Private SOC Lab Topology](Screenshots/lab-topology.jpeg)
 
 ## Objectives
 - Simulate basic cyber attacks in a controlled lab
