@@ -48,6 +48,8 @@ The implemented custom rules include:
 - TCP SYN scan activity
 - TCP SYN flood-like activity
 - SSH access to server
+- SSH brute-force-like bursts
+- Suspicious outbound connection to TCP port 4444
 
 ## Suricata Integration with Wazuh
 Suricata is integrated with Wazuh by forwarding EVE JSON logs to the Wazuh manager. This allows Suricata network alerts to be collected, parsed, and monitored through the SIEM platform.
@@ -57,11 +59,36 @@ Suricata log source:
 
 Suricata custom rules:
 - `/var/lib/suricata/rules/local.rules`
-- SSH brute-force-like bursts
-- Suspicious outbound connection to TCP port 4444
+
 ## Monitoring Workflow
 1. The attacker machine generates simulated attack traffic toward the victim server.
 2. Suricata analyzes the traffic and generates alerts based on custom rules.
 3. Suricata writes the events into `eve.json`.
 4. Wazuh reads the Suricata JSON logs through `ossec.conf`.
 5. Alerts and events can then be reviewed in the Wazuh dashboard.
+
+## Evidence and Screenshots
+The following screenshots document the setup, configuration, and detection results of the lab environment:
+- Lab topology diagram
+- IP configuration of each virtual machine
+- Wazuh manager service status
+- Suricata service status
+- Suricata custom rules
+- Wazuh integration with Suricata in `ossec.conf`
+- Suricata configuration test results
+- Suricata alert logs in `fast.log` or `eve.json`
+- Wazuh dashboard alerts
+
+## Current Project Status
+This lab environment has been set up and configured successfully. The current focus is on validating detections, collecting screenshots, and documenting attack simulations for portfolio purposes.
+
+## Future Improvements
+- Add more attack simulation scenarios
+- Create more custom Suricata detection rules
+- Improve alert correlation in Wazuh
+- Expand the lab with additional endpoints
+- Add incident investigation notes and response playbooks
+
+## Author
+**Matthew Benedict Ezekiel Saisab**  
+Cybersecurity learner and Informatics undergraduate at Universitas Atma Jaya Yogyakarta, building hands-on SOC lab projects for learning and internship preparation.
