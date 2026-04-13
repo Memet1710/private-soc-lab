@@ -59,3 +59,9 @@ Suricata custom rules:
 - `/var/lib/suricata/rules/local.rules`
 - SSH brute-force-like bursts
 - Suspicious outbound connection to TCP port 4444
+## Monitoring Workflow
+1. The attacker machine generates simulated attack traffic toward the victim server.
+2. Suricata analyzes the traffic and generates alerts based on custom rules.
+3. Suricata writes the events into `eve.json`.
+4. Wazuh reads the Suricata JSON logs through `ossec.conf`.
+5. Alerts and events can then be reviewed in the Wazuh dashboard.
