@@ -19,8 +19,8 @@ This project is a private SOC lab built to simulate attacks and monitor security
 
 ## Network Information
 - Kali Linux (Attacker): `192.168.106.128`
-- Ubuntu Live Server (Victim): `192.168.106.131`
-- Ubuntu Server with Wazuh + Suricata (SIEM): `192.168.106.130`
+- Ubuntu Server with Wazuh (SIEM): `192.168.106.130`
+- Ubuntu Live Server with Suricata + Wazuh Agent (Victim): `192.168.106.131`
 - Internal network: `192.168.106.0/24`
 
 ## Tools Used
@@ -62,10 +62,11 @@ Suricata custom rules:
 
 ## Monitoring Workflow
 1. The attacker machine generates simulated attack traffic toward the victim server.
-2. Suricata analyzes the traffic and generates alerts based on custom rules.
-3. Suricata writes the events into `eve.json`.
-4. Wazuh reads the Suricata JSON logs through `ossec.conf`.
-5. Alerts and events can then be reviewed in the Wazuh dashboard.
+2. Suricata running on the victim analyzes the traffic and generates alerts based on custom rules.
+3. Suricata writes the events into `eve.json` on the victim machine.
+4. Wazuh reads the Suricata JSON logs from the victim through the agent configuration.
+5. The logs are forwarded to the Wazuh manager for centralized monitoring and analysis.
+6. Alerts and events can then be reviewed in the Wazuh dashboard.
 
 ## Evidence and Screenshots
 The following screenshots document the setup, configuration, and detection results of the lab environment:
