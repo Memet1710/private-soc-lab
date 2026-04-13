@@ -17,7 +17,24 @@ This project is a private SOC lab built to simulate attacks and monitor security
 - Ubuntu Server with Wazuh + Suricata — SIEM / Monitoring
 - Ubuntu Live Server — Victim
 
-## Network
-- Kali: 192.168.106.128
-- Wazuh SIEM: 192.168.106.130
-- Victim: 192.168.106.131
+## Network Information
+- Kali Linux (Attacker): `192.168.106.128`
+- Ubuntu Live Server (Victim): `192.168.106.131`
+- Ubuntu Server with Wazuh + Suricata (SIEM): `192.168.106.130`
+- Internal network: `192.168.106.0/24`
+
+## Tools Used
+- Kali Linux
+- Wazuh SIEM
+- Suricata IDS
+- Ubuntu Live Server
+- SSH
+- Nmap
+
+## Attack Scenarios
+The lab is used to simulate several basic attack scenarios in a controlled environment, including:
+- ICMP ping activity
+- TCP SYN scan activity using Nmap
+- SSH access attempts
+- SSH brute-force-like bursts
+- Suspicious outbound connection activity on port 4444
